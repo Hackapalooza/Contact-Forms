@@ -85,9 +85,9 @@
 						<li>Let's get complicated! Downloading and going through Wufoo's form docs</li>
 						<li>The web inspector: u need dis</li>
 						<li>Removing what we don't want, adding what we do: HTML</li>
-						<li>linking multiple CSS docs</li>
 						<li>Styling our forms with CSS: how to and best practices</li>
 						<li>Time to style your own form</li>
+						<li>Styling suggestions</li>
 						<li>Wrap up and question time!</li>
 					</ul>
 				</section>
@@ -185,49 +185,121 @@
 					<p>After a break :)</p>
 				</section>
 
-
-
-				<section class="center">
-					<h1>This slide is centered because it has the class "center" on the &lt;section> element!</h1>
-				</section>
+				<!--PART TWO-->
 
 				<section>
-					<h1>A slide with an Image</h1>
-					<img src="content/images/blank_output.jpg">
+					<h1>Part Two: Editing Wufoo's HTML and CSS</h1>
+					<h2>Let's get complicated! Downloading and going through Wufoo's form docs</h2>
+					<p>We can still use the Wufoo form editor to build the HTML of our form - I'd suggest doing it this way because forms have <strong>so many</strong> special elements. 
+					<p>On the Wufoo website, navigate back to the main forms page. You can either create a new form or use the one we just made.</p> 
+					<p>Make sure the theme in the drop-down box is set to "default".</p>
 				</section>
-
 				<section>
-					<h1>A slide with some HTML Code</h1>
-					<pre><code>
-<!-- remember to escape the < character -->
-&lt;!doctype html>
-&lt;head>
-  &lt;title>Ladies Learning Code HTML and CSS&lt;/title>
-  &lt;style>
-    p {
-    color: red;
-    text-decoration: underline;
-    }
-  &lt;/style>
-&lt;/head>
-&lt;body>
-  &lt;p>This is a paragraph&lt;/p>
-&lt;/body>
-&lt;/html>
-					</code></pre>
+					<h1>Part Two: Editing Wufoo's HTML and CSS</h1>
+					<h2>Let's get complicated! Downloading and going through Wufoo's form docs (cont.)</h2>
+					<p>Now click on "code" again, and this time click on "HTML/CSS Code" (it's the yellow one)</p>
+					<p>Click "download files" and unzip the folder. For now, just keep this folder on your desktop so we can find it easily.</p>
+					<p>Open up the folder and rename the index.html file to <strong>"contact.html"</strong></p>
 				</section>
-
-				<section data-markdown>
-					# You can write your slides in mardown if you add the `data-markdown` attribute
-
-					- markdown makes it a bit easier to write content for the web
-					- learn more about [markdown syntax](https://daringfireball.net/projects/markdown/syntax)
-
-					## A level 2 header in markdown
-
-					```
-						\\ some code in markdown
-					```
+				<section>
+					<h1>Part Two: Editing Wufoo's HTML and CSS</h1>
+					<h2>Let's get complicated! Downloading and going through Wufoo's form docs (cont.)</h2>
+					<p>Let's take a look at the files and folders we've downloaded.</p>
+					<p>Open up <strong>all three</strong> CSS files, and contact.html in your text editor, and open the contact.html form in your browser.</p>
+					<p>Link your three CSS files to your contact.html file in the "head" area</p>
+					<p><strong>IMPORTANT:</strong> Make sure theme.css is the LAST one before your head closing tag.</p>
+				</section>
+				<section>
+					<h1>Part Two: Editing Wufoo's HTML and CSS</h1>
+					<h2>Let's get complicated! Downloading and going through Wufoo's form docs (cont.)</h2>
+					<p>EXAMPLE:</p>
+					<img src="content/images/linkExample.png">
+				</section>
+				<section>
+					<h1>Part Two: Editing Wufoo's HTML and CSS</h1>
+					<h2>Let's get complicated! Downloading and going through Wufoo's form docs (cont.)</h2>
+					<p>Now let's comment out a few things we don't need, and add in a container ID so that the form is totally modular.</p>
+					<p>First, in the theme.css doc, comment out the following:</p>
+				</section>
+				<section>
+					<img src="content/images/commentOutOne.png">
+				</section>
+				<section>
+					<h1>Part Two: Editing Wufoo's HTML and CSS</h1>
+					<h2>Let's get complicated! Downloading and going through Wufoo's form docs (cont.)</h2>
+					<p>Add a div with an ID of "myWufooForm" around our form. Opening tag goes just after the opening body tag, closing tag goes just after the closing .container tag.</p>
+					<p>Also go to the contact.html file, and comment out everything at the bottom of the doc from the a class=powertiny opening tag to the line just before our closing body tag.</p>
+				</section>
+				<section>
+					<p>EXAMPLE:</p>
+					<img src="content/images/commentOutTwo.png">
+				</section>
+				<section>
+					<h1>Part Two: Editing Wufoo's HTML and CSS</h1>
+					<h2>Let's get complicated! Downloading and going through Wufoo's form docs (cont.)</h2>
+					<p>Comment out the logo area on the html and css, comment out the html styles on the css, comment out the media query at the bottom of the CSS.</p>
+					<p>use #myWufooForm in front of every generic-sounding CSS selector (eg. .content, .container, html, body, .button, etc. If you want to be extra safe, put it in front of every selector!</p>
+				</section>
+				<section>
+					<h1>Part Two: Editing Wufoo's HTML and CSS</h1>
+					<h2>Let's get complicated! Downloading and going through Wufoo's form docs (cont.)</h2>
+					<p>ONE more thing: the HTML in contact.html is pretty ugly. Let's go to <a href="http://www.dirtymarkup.com/" target="_blank">dirtymarkup.com</a> to make it a little bit more presentable.</p>
+					<p>Cut EVERYTHING out of contact.html, and paste it in to the text box on dirtymarkup.com. Click "clean", making sure the HTML option on the upper left is selected (it's blue).</p>
+					<p>Copy the resulting prettified code, and paste it all back in to contact.html and save.</p>
+					<p>Now we're finally ready to edit our form!!!</p>
+					<p>(Short break if you need it)</p>
+				</section>
+				<section>
+					<h1>Part Two: Editing Wufoo's HTML and CSS</h1>
+					<h2>The web inspector: u need dis</h2>
+					<p>Let's go through some examples of what you might want to do with your form, and then you can do it on your own.</p>
+					<p>If you're having trouble locating what CSS form or where in the HTML an element lives, use the web inspector!</p>
+					<p>In Chrome or Firefox, in your browser open up contact.html and right click anywhere on the page, select "Inspect Element"</p>
+				</section>
+				<section>
+					<h1>Part Two: Editing Wufoo's HTML and CSS</h1>
+					<h2>Removing what we don't want, adding what we do: HTML</h2>
+					<p>Let's get familiar with editing Wufoo's docs by editing our HTML if we need to. For example, find some text you'd like to change and change it.</p>
+					<p>Remember to save your changes! If you don't know what something does, use the web inpector and/or ask a mentor! Don't change or add any IDs, classes, or divs at this point.</p>
+					<p>Take a few minutes to go over your content.html doc and make any changes you need to.</p>
+				</section>
+				<section>
+					<h1>Part Two: Editing Wufoo's HTML and CSS</h1>
+					<h2>Styling our forms with CSS: how to and best practices</h2>
+					<p>Now that our HTML is exactly how we want it, you can go ahead and style your form using the three css documents. Use the web inspector to see which form is affecting the style you want to change or remove. Most of it will be in theme.css</p>
+					<p>Remember to keep saving your work, and refreshing your browser to see what happens!</p>
+				</section>
+				<section>
+					<h1>Part Two: Editing Wufoo's HTML and CSS</h1>
+					<h2>Time to style your own form</h2>
+					<p>Keep styling! Ask me and the mentors for help. CMND+Z (on mac) and CTRL+Z (on pc's) will undo what you just did.</p>
+					<p>Suggestion: leave positioning to the end, maybe even until the open hack time.</p>
+					<p>You can see my example at: <a href="http://hackapalooza.emilyporta.com/contact-us/contact.html">hackapalooza.emilyporta.com/contact-us/contact.html</a></p>
+				</section>
+				<section>
+					<h1>Part Two: Editing Wufoo's HTML and CSS</h1>
+					<h2>Styling suggestions: SIMPLE and CLEAN</h2>
+					<p><strong>Colours:</strong> remember it's "color" not "colour" in your code. If you're not sure what colours to use, I like <a href="http://flatuicolorpicker.com" target="_blank">flatuicolorpicker.com</a>. Try to stick to two to three colours at most.</p>
+					<p><strong>Fonts:</strong> use what you learned in your typography session to try to add a google font. Keep it simple - ideally no more than two fonts!</p>
+					<p><strong>Miscellaneous:</strong> to get rid of blue outline: textarea, input { outline: none; } BUT it’s good for accessibility, so keep it if you can! You can get rid of the yellow in form.css, under form li.focused {background-color: #fff7c0;}</p>
+					<p><strong>Google fonts refresh:</strong> google.com/fonts, pick one, get the link, put in head, call it in the css with quotes around the name</p>
+				</section>
+				<section>
+					<h1>Part Two: Editing Wufoo's HTML and CSS</h1>
+					<h2>Wrap up and question time!</h2>
+					<p>Make sure you try out your form, log back in to Wufoo, and make sure the form is processing entries. Remember to use emails that end in "@example.com".</p>
+					<p>If it's not working, most likely the documents aren't linked correctly or your files are in the wrong/different directories. Ask the mentors if you can't figure it out, it's ok!</p>
+				</section>
+				<section>
+					<h1>Part Two: Editing Wufoo's HTML and CSS</h1>
+					<h2>Wrap up and question time!</h2>
+					<p>Questions?</p>
+					<p>If you think of questions later email at eeporta@gmail.com or tweet <a href="http://twitter.com/agentemily" target="_blank">@agentemily</a></p>
+					<p>Thank you! And happy form making!</p>
+					<br>
+					<p><strong>Emily Porta</strong></p>
+					<p>Web Developer, Librarian, Form Lover</p>
+					<p><a href="http://emilyporta.com">emilyporta.com</a></p>
 				</section>
 
 				<!-- end editable section -->
