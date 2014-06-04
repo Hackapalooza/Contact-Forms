@@ -183,6 +183,7 @@ body {
 
 .reveal .instructors h2 {
   color: #444;
+  margin-bottom: 50px;
 }
 
 .reveal .instructors ul {
@@ -195,17 +196,17 @@ body {
 }
 
 .reveal .instructors h3 {
-  font-size: 28px;
+  font-size: 50px;
   margin-bottom: 0;
 }
 
 .reveal .instructors p {
-  font-size: 24px;
+  font-size: 30px;
   margin-bottom: 0;
 }
 
 .reveal .instructors img {
-  width: 100px;
+  width: 350px;
   float: left;
   margin-right: 20px;
 }
